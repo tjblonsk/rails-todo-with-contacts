@@ -1,4 +1,4 @@
-Sinatra Multi Page (Movies) Homework
+Sinatra Todo List Homework
 =================
 
 #### How To Use Git For Your Homework Assignment
