@@ -1,4 +1,4 @@
-Sinatra Todo List Homework
+Rails Todo List Homework
 =================
 
 #### How To Use Git For Your Homework Assignment
