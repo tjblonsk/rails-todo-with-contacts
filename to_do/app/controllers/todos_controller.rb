@@ -1,21 +1,34 @@
 class TodosController < ApplicationController
   def index
-    # @todos = Todo.all
+    @todos = Todo.all
   end
 
   def new
   end
 
   def create
-    # get the info from params
-    name = params[:name]
-    # make a new todo object
-    todo = Todo.new
-    # store the info in the new todo object
-    todo.name = name
-    # save the todo to db
+
+  end
+
+  def show
+  @todo = Todo.find(params[:id])
+  end
+
+  def edit
+    @todo = Todo.find(params[:id])
+  end
+
+  def update
+    todo = Todo.find(params[:id])
+    todo.name = params[:name]
     todo.save
-    # redirect to index
-    redirect_to '/todos'
+    redirect_to "/todos/#{todo.id}"
+  end
+
+  def destroy
+    todo = Todo.find(params[:id])
+    todo.destroy
+    redirect_to('/todos')
   end
 end
+
